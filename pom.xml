@@ -38,6 +38,7 @@
 		
 		<dependency>
 		    <groupId>org.springframework.kafka</groupId>
+			<!--Spring replying kafka 模板-->
 		    <artifactId>spring-kafka</artifactId>
 		</dependency>
 		

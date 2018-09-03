@@ -1,4 +1,5 @@
 # RequestReplyKafka
+[引用](https://dzone.com/articles/synchronous-kafka-using-spring-request-reply-1)
 
 大家提到Kafka时第一印象就是它是一个快速的异步消息处理系统，不同于通常tomcat之类应用服务器和前端之间的请求/响应方式请求，客户端发出一个请求，必然会等到一个响应，这种方式对Kafka来说好像不适合，因为Kafka是一种事件驱动方式，通过事件才能激活一个响应，但是，问题来了，很多人习惯请求响应模型以后很难接受这种事件响应模型，包括发布订阅模型。
 
@@ -11,7 +12,10 @@
 
 下面是本案例的演示架构图，这个案例是实现同步的请求响应模型，以同步行为返回两个数字总和的结果。
 
+![Image](https://dzone.com/storage/temp/8922312-screen-shot-2018-04-22-at-45735-pm.png)
 
 客户端-->请求-->RESTcontroll-->Spring-kafka模板-->Kafka请求主题-->Kafka监听器 
                
 客户端<--响应<--RESTcontroll<--Spring-kafka模板<--Kafka响应主题<--Kafka监听器
+
+
